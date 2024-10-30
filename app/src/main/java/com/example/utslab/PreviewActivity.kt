@@ -16,13 +16,13 @@ class PreviewActivity : AppCompatActivity() {
         val previewMessage = findViewById<TextView>(R.id.previewMessage)
         val previewBorder = findViewById<ImageView>(R.id.previewBorder)
 
-        // Retrieve data from intent
+
         val name = intent.getStringExtra("name")
         val date = intent.getStringExtra("date")
         val message = intent.getStringExtra("message")
         val border = intent.getIntExtra("border", R.drawable.border1)
 
-        // Set data in the preview UI
+
         previewName.text = name
         previewDate.text = date
         previewMessage.text = message

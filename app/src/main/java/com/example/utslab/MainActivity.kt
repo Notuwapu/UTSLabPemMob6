@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editTextName: EditText
     private lateinit var editTextMessage: EditText
     private lateinit var editTextDate: EditText
-    private var selectedBorder = R.drawable.border1 // Default border
+    private var selectedBorder = R.drawable.border1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +26,12 @@ class MainActivity : AppCompatActivity() {
         editTextMessage = findViewById(R.id.editTextMessage)
         editTextDate = findViewById(R.id.editTextDate)
 
-        // Set up the DatePickerDialog for the date EditText
+
         editTextDate.setOnClickListener {
             showDatePickerDialog()
         }
 
-        // Set border selection logic
+
         val border1 = findViewById<ImageView>(R.id.border1)
         val border2 = findViewById<ImageView>(R.id.border2)
         val border3 = findViewById<ImageView>(R.id.border3)
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             val message = editTextMessage.text.toString()
             val date = editTextDate.text.toString()
 
-            // Start PreviewActivity and pass the data
+
             val intent = Intent(this, PreviewActivity::class.java)
             intent.putExtra("name", name)
             intent.putExtra("message", message)
@@ -71,7 +71,6 @@ class MainActivity : AppCompatActivity() {
         val datePickerDialog = DatePickerDialog(
             this,
             { _: DatePicker, selectedYear: Int, selectedMonth: Int, selectedDay: Int ->
-                // Format date as MM/DD/YYYY
                 val selectedDate = Calendar.getInstance()
                 selectedDate.set(selectedYear, selectedMonth, selectedDay)
                 val dateFormat = SimpleDateFormat("MM/dd/yyyy", Locale.US)

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,25 +14,38 @@
         android:padding="16dp">
 
         <TextView
+            android:id="@+id/TV_KartuUcapan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Membuat Kartu Ucapan"
+            android:text="@string/TV_KartuUcapan"
+            android:textColor="#000000"
             android:textSize="20sp"/>
-
 
         <!-- EditText for Name -->
         <EditText
             android:id="@+id/editTextName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name" />
+            android:hint="@string/editTextName"
+            android:inputType="text"
+            android:focusableInTouchMode="true"
+            android:autofillHints="name"
+            android:minHeight="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
 
         <!-- EditText for Message -->
         <EditText
             android:id="@+id/editTextMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Message" />
+            android:hint="@string/editTextMessage"
+            android:inputType="text"
+            android:focusableInTouchMode="true"
+            android:autofillHints="textMessage"
+            android:minHeight="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
 
         <!-- EditText for Date (Compact Date Picker) -->
         <EditText
@@ -43,70 +55,72 @@
             android:clickable="true"
             android:drawableEnd="@android:drawable/ic_menu_my_calendar"
             android:focusable="false"
-            android:hint="MM/DD/YYYY" />
+            android:hint="@string/editTextDate"
+            android:inputType="date"
+            android:focusableInTouchMode="true"
+            android:autofillHints="date"
+            android:minHeight="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
 
         <TextView
+            android:id="@+id/TV_Border"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pilih Border"
+            android:text="@string/TV_Border"
+            android:textColor="#000000"
             android:textSize="20sp"/>
-
 
         <!-- Horizontal ScrollView for Borders -->
         <ScrollView
+            android:id="@+id/SVBorder"
             android:layout_width="match_parent"
-            android:layout_height="456dp"
-            android:paddingTop="8dp">
+            android:layout_height="438dp"
+            android:paddingTop="8dp"
+            android:contentDescription="@string/SVBorder">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- ImageViews for each border option -->
+                <!-- ImageViews for each border option with color filters -->
                 <ImageView
                     android:id="@+id/border1"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:contentDescription="Border 1"
                     android:src="@drawable/border1" />
 
                 <ImageView
                     android:id="@+id/border2"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:contentDescription="Border 2"
                     android:src="@drawable/border2" />
 
                 <ImageView
                     android:id="@+id/border3"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:contentDescription="Border 3"
                     android:src="@drawable/border3" />
 
                 <ImageView
                     android:id="@+id/border4"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:contentDescription="Border 4"
                     android:src="@drawable/border4" />
 
                 <ImageView
                     android:id="@+id/border5"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:contentDescription="Border 5"
                     android:src="@drawable/border5" />
 
                 <ImageView
                     android:id="@+id/border6"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:contentDescription="Border 6"
                     android:src="@drawable/border6" />
 
-                <!-- Add more ImageViews as needed for additional borders -->
             </LinearLayout>
         </ScrollView>
 
@@ -114,13 +128,11 @@
         <Button
             android:id="@+id/btnPreview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Preview" />
+            android:layout_height="56dp"
+            android:minHeight="48dp"
+            android:text="@string/btnPreview"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
     </LinearLayout>
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

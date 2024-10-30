@@ -34,9 +34,17 @@ class MainActivity : AppCompatActivity() {
         // Set border selection logic
         val border1 = findViewById<ImageView>(R.id.border1)
         val border2 = findViewById<ImageView>(R.id.border2)
+        val border3 = findViewById<ImageView>(R.id.border3)
+        val border4 = findViewById<ImageView>(R.id.border4)
+        val border5 = findViewById<ImageView>(R.id.border5)
+        val border6 = findViewById<ImageView>(R.id.border6)
 
         border1.setOnClickListener { selectedBorder = R.drawable.border1 }
         border2.setOnClickListener { selectedBorder = R.drawable.border2 }
+        border3.setOnClickListener { selectedBorder = R.drawable.border3 }
+        border4.setOnClickListener { selectedBorder = R.drawable.border4 }
+        border5.setOnClickListener { selectedBorder = R.drawable.border5 }
+        border6.setOnClickListener { selectedBorder = R.drawable.border6 }
 
         val btnPreview = findViewById<Button>(R.id.btnPreview)
         btnPreview.setOnClickListener {

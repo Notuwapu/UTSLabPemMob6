@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">UTSLab</string>
+    <string name="TV_KartuUcapan">Membuat Kartu Ucapan</string>
+    <string name="editTextName">Name</string>
+    <string name="editTextMessage">Message</string>
+    <string name="editTextDate">MM/DD/YYYY</string>
+    <string name="TV_Border">Pilih Border</string>
+    <string name="SVBorder">Pilih Border Yang Ingin Digunakan</string>
+    <string name="btnPreview">Preview</string>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -20,6 +21,17 @@
             android:layout_gravity="center"
             android:gravity="center">
 
+            <!-- Button untuk kembali -->
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:contentDescription="Back"
+                android:layout_gravity="top|start"
+                android:padding="8dp"/>
+
             <!-- Untuk menampilkan border yang dipilih -->
             <ImageView
                 android:id="@+id/previewBorder"
@@ -28,7 +40,7 @@
                 android:layout_gravity="center"
                 android:scaleType="centerCrop" />
 
-            <!-- LinearLayout untuk menampilakn teks ditengah border -->
+            <!-- LinearLayout untuk menampilkan teks di tengah border -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
